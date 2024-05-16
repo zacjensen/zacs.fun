@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='light.css') }}" id="light-mode" disabled>
+</head>
+<body>
+    <header>
+        Dark Mode Website
+        <button id="toggle-mode">Switch to Light Mode</button>
+    </header>
+    <main>
+        <p>Welcome to the dark mode version of our website!</p>
+        <p>This is an example paragraph with a <a href="#">link</a>.</p>
+    </main>
+    <script>
+        const toggleButton = document.getElementById('toggle-mode');
+        const lightModeLink = document.getElementById('light-mode');
+
+        toggleButton.addEventListener('click', () => {
+            if (lightModeLink.disabled) {
+                lightModeLink.disabled = false;
+                toggleButton.textContent = 'Switch to Dark Mode';
+            } else {
+                lightModeLink.disabled = true;
+                toggleButton.textContent = 'Switch to Light Mode';
+            }
+        });
+
+        // Initialize button text based on the current mode
+        if (lightModeLink.disabled) {
+            toggleButton.textContent = 'Switch to Light Mode';
+        } else {
+            toggleButton.textContent = 'Switch to Dark Mode';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+body {
+    background-color: #121212;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1F1F1F;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+}
+
+main {
+    padding: 20px;
+}
+
+a {
+    color: #BB86FC;
+}
+
+a:hover {
+    color: #3700B3;
+}
